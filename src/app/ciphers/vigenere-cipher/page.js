@@ -1,10 +1,9 @@
-import Vigenere from "../(vigenere)/page"
-export const metadata = {
-  title: '',
-  description: '',
-  category: 'ciphers',
+import Vigenere from "../(vigenere)/vigenere"
 
-}
+export const metadata = {
+  title: "Vigenere Cipher Decoder",
+  description: "Vigenere description",
+};
 
 const VigenereCipher = () => {
   return (

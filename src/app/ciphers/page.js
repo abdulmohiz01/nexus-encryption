@@ -1,12 +1,11 @@
-import React from 'react'
+import Vigenere from "./(vigenere)/vigenere"
 
 
-export const metadata = {
-    category: 'ciphers',
-  }
 const Ciphers = () => {
   return (
-    <div>Ciphers</div>
+    <div>
+      Ciphers
+    </div>
   )
 }
 
