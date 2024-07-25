@@ -6,9 +6,13 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Nexus Encryption",
-  description: "Developed by Al-mohiz",
+  title: {
+    default: "Nexus Encryption",
+    template: "%s | Nexus Encryption"
+  },
+  description: "Next.js starter app description",
 };
+
 
 export default function RootLayout({ children }) {
   return (

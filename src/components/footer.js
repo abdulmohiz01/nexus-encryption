@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <Image src={'/nexus-1.png'} width={500} height={50} />
+          <Image src={'/nexus-1.png'} width={500} height={50}  alt={'Nexus Encryption Logo'} priority />
         </div>
         <div className="mr-12 flex flex-col gap-2 w-[200px] justify-center items-center">
           <h3>Social</h3>

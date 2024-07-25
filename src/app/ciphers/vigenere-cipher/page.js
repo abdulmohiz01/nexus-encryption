@@ -1,8 +1,16 @@
-import React from 'react'
+import Vigenere from "../(vigenere)/page"
+export const metadata = {
+  title: '',
+  description: '',
+  category: 'ciphers',
+
+}
 
 const VigenereCipher = () => {
   return (
-    <div>VigenereCipher</div>
+    <div>
+      <Vigenere />
+    </div>
   )
 }
 
