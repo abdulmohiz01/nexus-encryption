@@ -15,7 +15,7 @@ export const metadata = {
     image: "https://nexus-encryption.vercel.app/_next/image?url=%2Fnexus-1.png&w=640&q=75",
     site_name: "Nexus Encryption",
   },
-  canonical: "https://yourwebsite.com/caesar-cipher-decoder",
+  canonical: "https://nexus-encryption.vercel.app/ciphers/caesar-cipher",
   language: "en-US",
   category: 'ciphers',
 };
@@ -25,6 +25,8 @@ const CaesarCipher = () => {
   return (
     <>
       <Caesar />
+
+
     </>
   )
 }

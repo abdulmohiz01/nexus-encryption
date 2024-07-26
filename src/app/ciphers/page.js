@@ -1,10 +1,12 @@
-import Vigenere from "./(vigenere)/vigenere"
+import Link from "next/link"
+
 
 
 const Ciphers = () => {
   return (
     <div>
-      Ciphers
+      <Link href={'/ciphers/caesar-cipher'}>Caesar Cipher Decoder</Link>
+      <Link href={'/ciphers/vigenere-cipher'}>Vigenere Cipher Decoder</Link>
     </div>
   )
 }

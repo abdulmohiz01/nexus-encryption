@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 body {
   scroll-behavior: smooth;
   background-image: linear-gradient(
@@ -17,16 +18,40 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: rgba(26, 26, 26, 1);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: linear-gradient(
     90deg,
     rgba(26, 26, 26, 1) 0%,
     rgb(95, 95, 95) 50%,
     rgba(26, 26, 26, 1) 100%
   );
- border-radius: 10px;
+  border-radius: 10px;
+}
+
+.rotations-container {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.rotations-container.open {
+  opacity: 1;
+  max-height: 4500px; /* Adjust as needed */
+}
+
+.contents-container {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.contents-container.open {
+  opacity: 1;
+  max-height: 500px; /* Adjust as needed */
 }
 
