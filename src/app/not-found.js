@@ -1,9 +1,9 @@
-import Header from "@/components/header"
+
 import Link from "next/link"
 const Error = () => {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <main className="grid w-full h-[90vh] place-items-center px-6 py-24 sm:py-32 lg:px-8">
                 <div className="text-center text-white">
                     <p className="text-base font-semibold ">404</p>

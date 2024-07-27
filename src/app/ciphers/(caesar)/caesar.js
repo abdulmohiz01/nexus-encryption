@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { TextField } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
 import Button from "@mui/material/Button"
-import ArbitraryCaesarCipher from "@/components/arbitrary-substitution";
+import ArbitraryCaesarCipher from "./../../../components/arbitrary-substitution";
+
 
 
 
@@ -77,9 +78,9 @@ const Caesar = () => {
                     >
                         {isContentsVisible ? 'Hide Contents' : 'Show Contents of page'}
                     </button>
-                    <div className={`lg:ml-[20px] sm:ml-[20px] contents-container ${isContentsVisible ? 'open' : 'closed'}`}>
+                    <div className={`lg:ml-[20px] sm:ml-[20px] text-gray-400 contents-container ${isContentsVisible ? 'open' : 'closed'}`}>
                         <h2 className="text-2xl font-semibold mb-4">Contents</h2>
-                        <ol className="list-disc list-inside">
+                        <ol className="list-disc list-inside ">
                             <li><a href="#decoder" className="hover:underline transition-all" onClick={(e) => handleScroll(e, 'decoder')}>Caesar Cipher Decoder</a></li>
                             <li><a href="#introduction" className="hover:underline transition-all" onClick={(e) => handleScroll(e, 'introduction')}>Introduction</a></li>
                             <li><a href="#caesar-cipher-history" className="hover:underline" onClick={(e) => handleScroll(e, 'caesar-cipher-history')}>History</a></li>
@@ -187,64 +188,64 @@ const Caesar = () => {
 
                     <section id="introduction" className="mb-6">
                         <h2 className="text-2xl font-semibold mb-4">What is Caesar Cipher?</h2>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-gray-400">
                             The Caesar Cipher is a type of classical encryption technique which uses either <Tooltip title="Substitution cipher replaces each letter of the plaintext with another letter." placement='top'><span className='underline'>substitution</span></Tooltip> or <Tooltip title='Transposition cipher rearranges the letters of the plaintext according to a specific system.' placement='top'><span className='underline'>transposition</span></Tooltip> only. Substitution ciphers can be further divided into <Tooltip title='Monoalphabetic cipher uses a single fixed substitution for each letter of the plaintext.' placement='top'><span className='underline'>monoalphabetic</span></Tooltip> and <Tooltip title='Polyalphabetic cipher employs multiple substitution alphabets to encrypt the plaintext, changing the substitution at intervals.' placement='top'><span className='underline'>polyalphabetic</span></Tooltip> ciphers.
                         </p>
                     </section>
 
                     <section id="caesar-cipher-history" className="mb-6">
                         <h2 className="text-2xl font-semibold mb-4">History</h2>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-gray-400">
                             The Caesar Cipher is the earliest known substitution cipher, used by Julius Caesar. It replaces each letter in the plaintext with the letter that is a fixed number of positions down the alphabet. For example, with a key (K) of 10, 'a' becomes 'k'.
                         </p>
                     </section>
 
                     <section id="caesar-cipher-example" className="mb-6">
                         <h2 className="text-2xl font-semibold mb-4">Example</h2>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-gray-400">
                             Given the secret message P: "hello", and the key K: "10":
                         </p>
-                        <p className="text-lg leading-relaxed mb-4">
+                        <p className="text-lg leading-relaxed mb-4 text-gray-300">
                             <strong>Plaintext:</strong> hello<br />
                             <strong>Key:</strong> 10<br />
                             <strong>Encrypted Message (Ciphertext):</strong> rovvy
                         </p>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-gray-300">
                             The formula used is:
                         </p>
-                        <p className="text-lg leading-relaxed mb-4">
+                        <p className="text-lg leading-relaxed mb-4 text-gray-300">
                             <code>C = E(P) = (P + K) mod 26</code> or <code>C = E(P) = (P - K) mod 26</code>
                         </p>
-                        <p className="text-lg leading-relaxed mb-4">
+                        <p className="text-lg leading-relaxed mb-4 text-gray-300">
                             To understand modular operations, consider this example: If 6 hours pass, what time is it? A common mistake would be to answer 13, but on a 12-hour clock, it would be 1: <code>7 + 6 mod 12 = 1</code>. Similarly, the Caesar cipher uses modulus 26 with the English alphabet.
                         </p>
                     </section>
 
                     <section id="caesar-cipher-weakness" className="mb-6">
                         <h2 className="text-2xl font-semibold mb-4">Why Caesar Cipher is so Weak?</h2>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-gray-300">
                             The key size is too small (only 25 possible keys), making it easily breakable by brute force.
                         </p>
                     </section>
 
                     <section id="improving-caesar-cipher-security" className="mb-6">
                         <h2 className="text-2xl font-semibold mb-4">How can we improve Caesar Cipher's security?</h2>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-gray-300">
                             One way to improve security is to use a monoalphabetic cipher that uses an arbitrary substitution. This method involves shuffling the letters in the plaintext by mapping them to a different, random ciphertext letter.
                         </p>
-                        <p className="text-lg leading-relaxed mb-4">
+                        <p className="text-lg leading-relaxed mb-4 text-gray-300">
                             For instance, you can set up a secret phrase or word as the secret key. Let's use "MARKET" as our secret key. The remaining alphabet letters follow the last character of the key (excluding those already used).
                         </p>
                     </section>
 
                     <section id="example-arbitrary-caesar-cipher-substitution" className="mb-6">
                         <h2 className="text-2xl font-semibold mb-4">Example of Arbitrary Substitution</h2>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-gray-300">
                             Secret key: MARKET<br />
                             Remaining letters: <br />
                             <strong>M A R K E T B C D F G H I J L N O P Q S U V W X Y Z</strong>
                         </p>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-gray-300">
                             The secret key "MARKET" is followed by the rest of the alphabet, excluding letters already used in the key.
                         </p>
                     </section>
