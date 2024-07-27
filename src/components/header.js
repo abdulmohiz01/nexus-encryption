@@ -6,7 +6,8 @@ const Header = () => {
       <div className="flex justify-center p-5">
         <Link href={'/'}><Image src={'/nexus-1.png'} alt={'Nexus Encryption Logo'} priority width={550} height={50} /></Link>
       </div>
-      <div className="flex items-center justify-between px-12 py-3 border-b">
+      
+      <div className="flex items-center justify-between px-12 py-3 border-y">
         <Link href='/'>Home</Link>
         <Link href='/blog'>Blogs</Link>
         <Link href='/ciphers'>Ciphers</Link>

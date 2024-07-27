@@ -1,7 +1,24 @@
-'use client';
 import Link from 'next/link';
 import BreadCrumb from './../../components/breadcrumb';
 import { Container, Typography, Card, CardContent, CardActionArea } from '@mui/material';
+
+export const metadata = {
+  title: "Ciphers",
+  description: "A versatile web app for modular conversion, encoding, and encryption. Perform all operations directly in your browser without server interaction, ensuring speed and privacy. This open-source project is licensed under the MIT License, offering transparency and freedom for community contributions.",
+  author: "Nexus Encryption",
+  robots: "index, follow",
+  openGraph: {
+    title: "Ciphers - Nexus Encryption",
+    description: "A versatile web app for modular conversion, encoding, and encryption. Perform all operations directly in your browser without server interaction, ensuring speed and privacy. This open-source project is licensed under the MIT License, offering transparency and freedom for community contributions.",
+    type: "website",
+    url: "https://nexusencryption.com/ciphers",
+    site_name: "Nexus Encryption",
+  },
+  canonical: "https://nexusencryption.com/ciphers",
+  language: "en-US",
+  category: "ciphers",
+};
+
 
 const ciphers = [
   {
@@ -19,26 +36,26 @@ const ciphers = [
 const Ciphers = () => {
   return (
     <div className="md:h-[550px]">
-      <BreadCrumb 
-        homeElement="Home" 
+      <BreadCrumb
+        homeElement="Home"
         separator={
-          <svg 
-            className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" 
-            aria-hidden="true" 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
+          <svg
+            className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
             viewBox="0 0 6 10"
           >
-            <path 
-              stroke="currentColor" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
-              d="m1 9 4-4-4-4" 
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m1 9 4-4-4-4"
             />
           </svg>
-        } 
-        capitalizeLinks={true} 
+        }
+        capitalizeLinks={true}
       />
 
       <Container maxWidth="md" className="text-white p-6 rounded-lg shadow-lg mt-10">
@@ -47,8 +64,8 @@ const Ciphers = () => {
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {ciphers.map((cipher, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="bg-gray-700 text-white rounded-lg shadow-lg"
             >
               <CardActionArea>

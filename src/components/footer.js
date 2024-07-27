@@ -16,7 +16,7 @@ const NavigationLinks = [
   },
   {
     name: 'About Us',
-    href: '/aboutus'
+    href: '/aboutUs'
   }
 ];
 const CipherLinks = [
@@ -41,15 +41,15 @@ const Footer = () => {
         <div className="container lg:mx-auto px-4 sm:ml-2">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
-              <h5 className="text-3xl  text-blueGray-700">Let's keep in touch!</h5>
-              <h4 className="text-lg mt-0 mb-2 text-gray-400">
+              <h1 className="text-3xl  text-blueGray-700">Let's keep in touch!</h1>
+              <h2 className="text-lg mt-0 mb-2 text-gray-400">
                 Nexus Encryption is an Open source project. Feel free to suggest any changes.
-              </h4>
+              </h2>
               <div className="mt-6 lg:mb-0 mb-6 flex p-2 gap-3">
-                <Link href={'https://github.com/abdulmohiz01/nexus-encryption'}> <FaSquareGithub href={'https://github.com/abdulmohiz01/nexus-encryption'} size={20} className=" text-gray-50 hover:text-gray-400 transition-all duration-300 ease-in-out " /></Link>
-                <Link href={'https://www.upwork.com/freelancers/~01939710390bbdfe41'}> <FaSquareUpwork size={20} className="text-gray-50 hover:text-gray-400 transition-all duration-300 ease-in-out " /></Link>
-                <Link href={'https://www.linkedin.com/in/abdul-mohiz/'}> <FaLinkedin size={20} className=" text-gray-50 hover:text-gray-400 transition-all duration-300 ease-in-out " /></Link>
-                <Link href={'https://www.instagram.com/_abdulmohiz_'}> <FaInstagram size={20} className=" text-gray-50 hover:text-gray-400 transition-all duration-300 ease-in-out " /></Link>
+                <Link href={'https://github.com/abdulmohiz01/nexus-encryption'} aria-label="Github" > <FaSquareGithub href={'https://github.com/abdulmohiz01/nexus-encryption'} size={20} className=" text-gray-50 hover:text-gray-400 transition-all duration-300 ease-in-out " /></Link>
+                <Link href={'https://www.upwork.com/freelancers/~01939710390bbdfe41'} aria-label="Upwork" > <FaSquareUpwork size={20} className="text-gray-50 hover:text-gray-400 transition-all duration-300 ease-in-out " /></Link>
+                <Link href={'https://www.linkedin.com/in/abdul-mohiz/'} aria-label="LinkedIn" > <FaLinkedin size={20} className=" text-gray-50 hover:text-gray-400 transition-all duration-300 ease-in-out " /></Link>
+                <Link href={'https://www.instagram.com/_abdulmohiz_'} aria-label="Instagram" > <FaInstagram size={20} className=" text-gray-50 hover:text-gray-400 transition-all duration-300 ease-in-out " /></Link>
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
