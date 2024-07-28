@@ -11,10 +11,10 @@ export const metadata = {
     title: "Vigenère Cipher Decoder",
     description: "Discover the Vigenère Cipher decoder, a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. Named after Blaise de Vigenère, it is a more secure cipher that uses a keyword to shift letters.",
     type: "website",
-    url: "https://nexus-encryption.vercel.app/ciphers/vigenere-cipher",
+    url: "https://nexusencryption.com/ciphers/vigenere-cipher",
     site_name: "Nexus Encryption",
   },
-  canonical: "https://nexus-encryption.vercel.app/ciphers/vigenere-cipher",
+  canonical: "https://nexusencryption.com/ciphers/vigenere-cipher",
   language: "en-US",
   category: 'ciphers',
 };
