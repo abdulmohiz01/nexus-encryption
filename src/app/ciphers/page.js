@@ -20,7 +20,7 @@ export const metadata = {
 };
 
 
-const ciphers = [
+const classicalCiphers = [
   {
     name: 'Caesar Cipher',
     description: 'A substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.',
@@ -31,6 +31,28 @@ const ciphers = [
     description: 'A method of encrypting alphabetic text by using a series of different Caesar ciphers based on the letters of a keyword.',
     link: '/ciphers/vigenere-cipher',
   },
+  {
+    name: 'Rail Fence Cipher',
+    description: 'A transposition cipher that writes text in a zigzag pattern across multiple rows. The letters are then read off row by row to create the ciphertext.',
+    link: '/ciphers/rail-fence-cipher'
+  }
+];
+const modernCiphers = [
+  {
+    name: 'Caesar Cipher',
+    description: 'A substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.',
+    link: '/ciphers/caesar-cipher',
+  },
+  {
+    name: 'Vigenère Cipher',
+    description: 'A method of encrypting alphabetic text by using a series of different Caesar ciphers based on the letters of a keyword.',
+    link: '/ciphers/vigenere-cipher',
+  },
+  {
+    name: 'Rail Fence Cipher',
+    description: 'A transposition cipher that writes text in a zigzag pattern across multiple rows. The letters are then read off row by row to create the ciphertext.',
+    link: '/ciphers/rail-fence-cipher'
+  }
 ];
 
 const Ciphers = () => {
@@ -59,11 +81,35 @@ const Ciphers = () => {
       />
 
       <Container maxWidth="md" className="text-white p-6 rounded-lg shadow-lg mt-10">
-        <Typography variant="h3" component="h1" className="text-center mb-6 text-white">
-          Ciphers
+        <Typography variant="h3" component="h1" className="text-center mb-6 text-gray-200">Classical Ciphers</Typography>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {classicalCiphers.map((cipher, index) => (
+            <Card
+              key={index}
+              className="bg-gray-700 text-white rounded-lg shadow-lg"
+            >
+              <CardActionArea>
+                <Link href={cipher.link} passHref>
+                  <CardContent>
+                    <Typography variant="h5" component="div" className="mb-2">
+                      {cipher.name}
+                    </Typography>
+                    <Typography variant="body2" className='text-gray-200'>
+                      {cipher.description}
+                    </Typography>
+                  </CardContent>
+                </Link>
+              </CardActionArea>
+            </Card>
+          ))}
+        </div>
+      </Container>
+      <Container maxWidth="md" className="text-white p-6 rounded-lg shadow-lg mt-10">
+        <Typography variant="h3" component="h1" className="text-center mb-6 text-gray-200">
+          Modern Ciphers
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {ciphers.map((cipher, index) => (
+          {modernCiphers.map((cipher, index) => (
             <Card
               key={index}
               className="bg-gray-700 text-white rounded-lg shadow-lg"

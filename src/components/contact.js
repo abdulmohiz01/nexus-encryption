@@ -33,6 +33,7 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
     // Handle form submission (e.g., send data to backend or email service)
     setFormSubmitted(true);
     // Clear form fields

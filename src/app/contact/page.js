@@ -17,7 +17,6 @@ export const metadata = {
 };
 
 
-
 const Contact = () => {
   return (
     <>
