@@ -1,7 +1,7 @@
 // pages/rail-fence-cipher.js
 
 import BreadCrumb from '../../../components/breadcrumb';
-import RailFence from "./../(railfence)/page"
+import RailFence from "./../(railfence)/railfence"
 
 
 export const metadata = {

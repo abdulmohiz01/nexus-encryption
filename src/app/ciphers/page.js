@@ -39,25 +39,16 @@ const classicalCiphers = [
 ];
 const modernCiphers = [
   {
-    name: 'Caesar Cipher',
+    name: 'Advanced Encryption Standard',
     description: 'A substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.',
-    link: '/ciphers/caesar-cipher',
+    link: '/ciphers/advanced-encryption-standard',
   },
-  {
-    name: 'Vigenère Cipher',
-    description: 'A method of encrypting alphabetic text by using a series of different Caesar ciphers based on the letters of a keyword.',
-    link: '/ciphers/vigenere-cipher',
-  },
-  {
-    name: 'Rail Fence Cipher',
-    description: 'A transposition cipher that writes text in a zigzag pattern across multiple rows. The letters are then read off row by row to create the ciphertext.',
-    link: '/ciphers/rail-fence-cipher'
-  }
+
 ];
 
 const Ciphers = () => {
   return (
-    <div className="md:h-[550px]">
+    <div className="">
       <BreadCrumb
         homeElement="Home"
         separator={

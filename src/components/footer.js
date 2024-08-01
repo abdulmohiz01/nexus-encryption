@@ -31,6 +31,10 @@ const CipherLinks = [
   {
     name: 'Rail Fence Cipher',
     href: '/ciphers/rail-fence-cipher'
+  },
+  {
+    name: 'AES',
+    href: '/ciphers/advanced-encryption-standard'
   }
 ];
 const date = new Date();
