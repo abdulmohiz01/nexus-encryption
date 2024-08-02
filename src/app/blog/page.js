@@ -21,7 +21,9 @@ export const metadata = {
 
 const Blogs = () => {
   return (
-    <div className='h-[600px]'>Blogs</div>
+    <div className='h-[600px] flex justify-center items-center'>
+      <h1 className='text-center text-3xl'>This page is Under Construction. Please visit again after sometime. Thankyou!</h1>
+    </div>
   )
 }
 

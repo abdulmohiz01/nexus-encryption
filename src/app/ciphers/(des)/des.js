@@ -293,10 +293,10 @@ const DesPage = () => {
           <ol className="list-disc list-inside ">
             <li><a href="#des-introduction" className="hover:underline transition-all" onClick={(e) => handleScroll(e, 'des-introduction')}>Introduction</a></li>
             <li><a href="#des-features" className="hover:underline" onClick={(e) => handleScroll(e, 'des-features')}>Key Features</a></li>
-            <li><a href="#des-key-sizes" className="hover:underline" onClick={(e) => handleScroll(e, 'des-key-sizes')}>DES Key Sizes & Security</a></li>
             <li><a href="#des-encryption-process" className="hover:underline" onClick={(e) => handleScroll(e, 'des-encryption-process')}>DES Encryption Process</a></li>
             <li><a href="#des-modes" className="hover:underline" onClick={(e) => handleScroll(e, 'des-modes')}>DES Modes of Operation</a></li>
             <li><a href="#des-applications" className="hover:underline" onClick={(e) => handleScroll(e, 'des-applications')}>DES Applications</a></li>
+            <li><a href="#des-security" className="hover:underline" onClick={(e) => handleScroll(e, 'des-security')}>DES Security Concerns</a></li>
             <li><a href="#des-example" className="hover:underline" onClick={(e) => handleScroll(e, 'des-example')}>DES Example</a></li>
           </ol>
         </div>

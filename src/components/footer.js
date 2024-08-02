@@ -33,6 +33,10 @@ const CipherLinks = [
     href: '/ciphers/rail-fence-cipher'
   },
   {
+    name: 'DES',
+    href: '/ciphers/data-encryption-standard'
+  },
+  {
     name: 'AES',
     href: '/ciphers/advanced-encryption-standard'
   }

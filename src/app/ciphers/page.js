@@ -39,6 +39,11 @@ const classicalCiphers = [
 ];
 const modernCiphers = [
   {
+    name: 'Data Encryption Standard',
+    description: 'A substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.',
+    link: '/ciphers/data-encryption-standard',
+  },
+  {
     name: 'Advanced Encryption Standard',
     description: 'A substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.',
     link: '/ciphers/advanced-encryption-standard',
@@ -49,29 +54,8 @@ const modernCiphers = [
 const Ciphers = () => {
   return (
     <div className="">
-      <BreadCrumb
-        homeElement="Home"
-        separator={
-          <svg
-            className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 6 10"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="m1 9 4-4-4-4"
-            />
-          </svg>
-        }
-        capitalizeLinks={true}
-      />
-
-      <Container maxWidth="md" className="text-white p-6 rounded-lg shadow-lg mt-10">
+      <BreadCrumb homeElement="Home" separator={<svg className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10" > <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" /> </svg>} capitalizeLinks={true} />
+      <Container maxWidth="md" className="text-white p-4 rounded-lg shadow-lg mt-10">
         <Typography variant="h3" component="h1" className="text-center mb-6 text-gray-200">Classical Ciphers</Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {classicalCiphers.map((cipher, index) => (
@@ -95,7 +79,7 @@ const Ciphers = () => {
           ))}
         </div>
       </Container>
-      <Container maxWidth="md" className="text-white p-6 rounded-lg shadow-lg mt-10">
+      <Container maxWidth="md" className="text-white p-4 mb-8 rounded-lg shadow-lg mt-10">
         <Typography variant="h3" component="h1" className="text-center mb-6 text-gray-200">
           Modern Ciphers
         </Typography>
