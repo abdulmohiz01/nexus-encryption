@@ -6,10 +6,10 @@ import { NextResponse } from 'next/server';
 export async function POST(request) {
   try {
     const data = await request.json();
-   // console.log(data);
+    // console.log(data);
     const { name, email, subject, message } = data;
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: 'Gmail',
       auth: {
         user: process.env.emailFrom,
         pass: process.env.pass,
