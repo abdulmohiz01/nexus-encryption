@@ -88,10 +88,10 @@ const CaesarCipher = () => {
   };
 
   return (
-    <div className="lg:ml-[150px] flex flex-col gap-5 items-start h-auto w-auto p-5">
+    <div className="lg:ml-[150px]  xl:w-[60%] lg:w-[80%] flex flex-col gap-5 items-start h-auto w-auto p-5">
       <TextField
         autoComplete='off'
-        className='sm:w-full xl:w-[60%]'
+        className='sm:w-full xl:w-full'
         label="Text"
         variant="outlined"
         fullWidth
@@ -133,7 +133,7 @@ const CaesarCipher = () => {
       />
       <TextField
         autoComplete='off'
-        className='sm:w-full xl:w-[60%]'
+        className='sm:w-full xl:w-full'
         label="Key"
         variant="outlined"
         fullWidth

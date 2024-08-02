@@ -69,7 +69,7 @@ const Caesar = () => {
 
     return (
         <>
-            <div className='lg:ml-[150px]'>
+            <div className='lg:ml-[150px]  xl:w-[60%] lg:w-[80%] '>
                 <h1 className="p-5 text-3xl font-semibold">Caesar Cipher: Decoder and Encoder</h1>
                 <div className="mb-6">
                     <button
@@ -95,7 +95,7 @@ const Caesar = () => {
 
                 <div id='decoder' className="flex flex-col gap-5 items-start h-auto w-full p-5">
                     <TextField
-                        className='sm:w-full xl:w-[60%]'
+                        className='sm:w-full xl:w-full'
                         name='text'
                         value={inputText}
                         onChange={handleInputChange}
@@ -160,7 +160,7 @@ const Caesar = () => {
                 {/* ---------------------ROTATIONS--------------------- */}
                 <div className={`rotations-container ${isRotationsVisible ? 'open' : 'closed'}`}>
                     <div className="w-full">
-                        <div className="xl:w-[60%] sm:w-full">
+                        <div className="xl:w-full sm:w-full">
                             <hr className="w-full border-t border-gray-300 my-5" />
                             <h1 className="text-2xl font-semibold mb-3 sm:px-2">Transformation</h1>
                             <div className='flex items-center justify-around md:p-2 sm:py-1 sm:px-2 gap-2'>
@@ -183,7 +183,7 @@ const Caesar = () => {
                 </div>
 
                 {/* --------------------Explanation------------------- */}
-                <div className='sm:w-full xl:w-[60%] md:m-3 sm:p-2 px-6'>
+                <div className='w-full  sm:p-2 px-6'>
                     <h1 className="text-4xl font-bold my-6">Caesar Cipher: A Classical Encryption Technique</h1>
 
                     <section id="introduction" className="mb-6">

@@ -54,7 +54,7 @@ const Vigenere = () => {
   };
 
   return (
-    <div className="lg:ml-[150px] xl:w-[60%] flex flex-col gap-5 items-start h-auto  p-5">
+    <div className="lg:ml-[150px] xl:w-[60%] lg:w-[80%] flex flex-col gap-5 items-start h-auto  p-5">
       <h1 className='text-3xl font-semibold'>Vigenère Cipher: Decoder and Encoder</h1>
 
       <TextField
@@ -191,7 +191,7 @@ const Vigenere = () => {
           </div>
         </div>
       </div>
-      <p className='text-lg mb-4 sm:w-full xl:w-[80%] text-gray-300'>
+      <p className='text-lg mb-4 w-full  text-gray-300'>
         The Vigenère cipher is a method of encrypting text using a series of different Caesar ciphers based on the letters of a keyword. It is a polyalphabetic substitution cipher that provides better security than a simple Caesar cipher by using a repeating key. This cipher is named after Blaise de Vigenère, who popularized it in the 16th century.
       </p>
     </div>
