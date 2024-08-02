@@ -31,9 +31,20 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    //console.log(formData);
+    try {
+      const response = await fetch('api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+    } catch (error) {
+      console.log('Error sending Email: ', error);
+    }
     // Handle form submission (e.g., send data to backend or email service)
     setFormSubmitted(true);
     // Clear form fields

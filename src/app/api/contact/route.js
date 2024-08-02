@@ -1,12 +1,36 @@
 // Import necessary modules
+import nodemailer from 'nodemailer'
 import { NextResponse } from 'next/server';
 
 // Define a function to handle POST requests
 export async function POST(request) {
   try {
     const data = await request.json();
-    // Process the data (e.g., send an email, save to a database)
-    console.log(data);
+   // console.log(data);
+    const { name, email, subject, message } = data;
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.emailFrom,
+        pass: process.env.pass,
+      },
+    });
+    const mailOptions = {
+      from: process.env.emailFrom,
+      to: process.env.emailTo,
+      subject: `${subject}`,
+      text: `Name: ${name} \nEmail: ${email}\n\nMessage: ${message}`,
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.status(500).send('Internal Server Error');
+      }
+      else {
+        console.log('Email Sent: ' + info.response);
+      }
+    });
+
 
     return NextResponse.json({ message: 'Data received successfully' }, { status: 200 });
   } catch (error) {
