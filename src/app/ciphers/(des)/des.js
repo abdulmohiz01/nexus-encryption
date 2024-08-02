@@ -277,7 +277,7 @@ const DesPage = () => {
 
   return (
     <div className="mx-auto lg:ml-[150px] sm:w-full xl:w-[80%] lg:w-[80%] p-4">
-      <h2 className="text-2xl font-semibold text-white mb-4">DES, DES2, and DES3 Encryption and Decryption</h2>
+      <h2 className="text-2xl font-semibold text-white mb-4">DES Cipher Algorithm - DES2, DES3 Encryption and Decryption</h2>
       <p className="text-lg mb-4 text-gray-300">
         Explore DES, DES2, and DES3 encryption with customizable key formats and output formats.
       </p>
