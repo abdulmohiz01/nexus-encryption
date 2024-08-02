@@ -39,6 +39,11 @@ const classicalCiphers = [
 ];
 const modernCiphers = [
   {
+    name: 'RSA Algorithm',
+    description: 'Discover RSA, a robust asymmetric encryption algorithm widely used for secure data transmission. RSA relies on a pair of keys – public and private – to ensure data confidentiality and integrity.',
+    link: '/ciphers/rsa-algorithm',
+  },  
+  {
     name: 'Data Encryption Standard',
     description: 'A substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.',
     link: '/ciphers/data-encryption-standard',
