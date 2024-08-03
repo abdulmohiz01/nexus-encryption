@@ -61,8 +61,8 @@ const Footer = () => {
         <div className="container lg:mx-auto px-4 sm:ml-2">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
-              <h1 className="text-3xl  text-blueGray-700">Let's keep in touch!</h1>
-              <h2 className="text-lg mt-0 mb-2 text-gray-400">
+              <h2 className="text-3xl  text-blueGray-700">Let's keep in touch!</h1>
+              <h3 className="text-lg mt-0 mb-2 text-gray-400">
                 Nexus Encryption is an Open source project. Feel free to suggest any changes.
               </h2>
               <div className="mt-6 lg:mb-0 mb-6 flex p-2 gap-3">
