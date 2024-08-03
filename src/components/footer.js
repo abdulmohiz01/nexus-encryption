@@ -33,13 +33,21 @@ const CipherLinks = [
     href: '/ciphers/rail-fence-cipher'
   },
   {
+    name: 'Hash Functions',
+    href: '/ciphers/hash-functions'
+  },
+  {
     name: 'DES',
     href: '/ciphers/data-encryption-standard'
   },
   {
     name: 'AES',
     href: '/ciphers/advanced-encryption-standard'
-  }
+  },
+  {
+    name: 'RSA',
+    href: '/ciphers/rsa-algorithm'
+  },
 ];
 const date = new Date();
 let d = date.getFullYear();

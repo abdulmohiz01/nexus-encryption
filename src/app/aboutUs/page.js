@@ -1,4 +1,5 @@
 import AboutPage from "../../components/aboutus"
+import BreadCrumb from "../../components/breadcrumb";
 
 
 export const metadata = {
@@ -22,6 +23,7 @@ export const metadata = {
 const About = () => {
   return (
     <>
+      <BreadCrumb />
       <AboutPage />
     </>
   );

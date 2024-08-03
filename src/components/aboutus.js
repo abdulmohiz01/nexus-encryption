@@ -1,18 +1,11 @@
 'use client';
 import { Typography } from '@mui/material';
-import BreadCrumb from './../components/breadcrumb'
 import Image from 'next/image';
 
 
 const AboutPage = () => {
   return (
     <>
-      <BreadCrumb
-        homeElement="Home"
-        separator={<svg className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" /></svg>}
-        capitalizeLinks={true}
-      />
-
       <div className="text-white p-6 rounded-lg shadow-md mt-10 mx-auto max-w-4xl">
         <Typography variant="h3" component="h1" className="text-center mb-6 text-white">
           About Us
