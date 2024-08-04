@@ -13,12 +13,12 @@ export default async function Home() {
   //     image: 'mohiz'
   //   },
   // });
-  // const users = await db.user.findUnique({
-  //   where: {
-  //     id: 2,
-  //   },
-  // })
-  // console.log(users);
+  const users = await db.user.findUnique({
+    where: {
+      id: 2,
+    },
+  })
+  console.log(users);
 
 
   return (
