@@ -1,24 +1,9 @@
 import Link from "next/link";
 import Button from '@mui/material/Button';
 
-import { PrismaClient } from '@prisma/client';
- 
-const db = new PrismaClient();
 
 export default async function Home() {
-  // const newUser = await db.user.create({
-  //   data: {
-  //     name: 'Mohiz',
-  //     email: 'mohiz@123.com',
-  //     image: 'mohiz'
-  //   },
-  // });
-  const users = await db.user.findUnique({
-    where: {
-      id: 2,
-    },
-  })
-  console.log(users);
+
 
 
   return (
