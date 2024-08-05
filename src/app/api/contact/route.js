@@ -6,6 +6,7 @@ export async function POST(request) {
   try {
     const data = await request.json();
     // console.log(data);
+    console.log(process.env.emailTo, process.env.emailFrom);
     const { name, email, subject, message } = data;
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
