@@ -3,7 +3,7 @@ import BreadCrumb from "./../../../components/breadcrumb";
 
 export const metadata = {
   title: "Caesar Cipher Decoder",
-  description: "Explore the Caesar Cipher decoder, where each letter shifts a fixed number of positions. Named after Julius Caesar for secret communication.",
+  description: "Explore the Caesar Cipher decoder, where each letter rotates a fixed number of positions. Named after Julius Caesar for secret communication.",
   author: "Nexus Encryption",
   robots: "index, follow",
   openGraph: {
