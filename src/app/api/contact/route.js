@@ -10,7 +10,8 @@ export async function POST(request) {
     const { name, email, subject, message } = data;
     const transporter = nodemailer.createTransport( {
       service: 'gmail',
-      host: "smtp.ethereal.email",
+      host: "smtp.gmail.com",
+      port: "465",
       auth: {
         user: process.env.emailFrom,
         pass: process.env.pass,
