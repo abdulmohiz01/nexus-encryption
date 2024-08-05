@@ -8,14 +8,28 @@ export async function POST(request) {
     // console.log(data);
     console.log(process.env.emailTo, process.env.emailFrom);
     const { name, email, subject, message } = data;
-    const transporter = nodemailer.createTransport( {
+    const transporter = nodemailer.createTransport({
       service: 'gmail',
       host: "smtp.gmail.com",
-      port: "587",
+      port: 465,
+      secure: true,
+
+      tls: {
+        // do not fail on invalid certs
+        rejectUnauthorized: false,
+      },
       auth: {
         user: process.env.emailFrom,
         pass: process.env.pass,
       },
+    });
+    
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Server is ready to take our messages");
+      }
     });
     const mailOptions = {
       from: process.env.emailFrom,
