@@ -3,13 +3,13 @@ import BreadCrumb from "../../../components/breadcrumb";
 
 
 export const metadata = {
-    title: "Hash Functions: MD5, SHA-1, SHA-256, SHA-512 & RIPEMD-160",
-    description: "Explore various cryptographic hash functions including MD5, SHA-1, SHA-256, SHA-512, and RIPEMD-160. Generate secure hashes for your data with our user-friendly tool.",
+    title: "Hash Functions | MD5 | SHA-1 | SHA-256 | SHA-512 Generator",
+    description: "Generate secure hashes with MD5, SHA-1, SHA-256, SHA-512, and RIPEMD-160. Explore our user-friendly tool for cryptographic hash functions.",
     author: "Nexus Encryption",
     robots: "index, follow",
     openGraph: {
         title: "Hash Functions: MD5, SHA-1, SHA-256, SHA-512 & RIPEMD-160",
-        description: "Explore various cryptographic hash functions including MD5, SHA-1, SHA-256, SHA-512, and RIPEMD-160. Generate secure hashes for your data with our user-friendly tool.",
+        description: "Generate secure hashes with MD5, SHA-1, SHA-256, SHA-512, and RIPEMD-160. Explore our user-friendly tool for cryptographic hash functions.",
         type: "website",
         url: "https://nexusencryption.com/",
         image: "https://nexusencryption.com/_next/image?url=%2Fnexus-1.png&w=640&q=75",
@@ -19,6 +19,7 @@ export const metadata = {
     language: "en-US",
     category: 'ciphers',
 };
+
 
 
 const HashFunctions = () => {

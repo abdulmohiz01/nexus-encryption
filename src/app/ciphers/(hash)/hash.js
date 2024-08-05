@@ -143,7 +143,7 @@ const HashPage = () => {
 
     return (
         <div className="mx-auto lg:ml-[150px] sm:w-full xl:w-[80%] lg:w-[80%] p-4">
-            <h1 className="text-2xl font-semibold text-white mb-4">Hash Functions | MD5 | SHA-1 | SHA-256 | SHA-512 Generator</h1>
+            <h1 className="text-2xl font-semibold text-white mb-4">Hash Functions: MD5, SHA-1, SHA-256, SHA-512 & RIPEMD-160</h1>
             <p className="text-lg mb-4 text-gray-300">
                 Explore various hash functions in cryptograhy and generate secure hashes for your data.
             </p>

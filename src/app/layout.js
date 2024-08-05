@@ -13,14 +13,14 @@ export const metadata = {
     default: "Nexus Encryption",
     template: "%s - Nexus Encryption"
   },
-  description: "A versatile web app for modular conversion, encoding, and encryption. Perform all operations directly in your browser without server interaction, ensuring speed and privacy. This open-source project is licensed under the MIT License, offering transparency and freedom for community contributions. Explore our blogs related to tech and information security for the latest insights and updates.",
+  description: "A versatile web app for modular conversion, encoding, and encryption. Perform operations in your browser with speed and privacy.",
   twitter: {
     card: "summary_large_image"
   },
-  alternates: {
-    canonical: '/',
-  }
+  canonical: "https://nexusencryption.com/",
 };
+
+
 
 export default function RootLayout({ children }) {
   return (

@@ -3,7 +3,7 @@ import BreadCrumb from "./../../../components/breadcrumb"
 
 
 export const metadata = {
-  title: "Vigenère Cipher Decoder",
+  title: "Vigenère Cipher Decode",
   description: "Discover the Vigenère Cipher decoder, a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. Named after Blaise de Vigenère, it is a more secure cipher that uses a keyword to shift letters.",
   author: "Nexus Encryption",
   robots: "index, follow",

@@ -236,7 +236,7 @@ const AesPage = () => {
 
     return (
         <div className="mx-auto lg:ml-[150px] sm:w-full xl:w-[80%] lg:w-[80%] p-4">
-            <h2 className="text-2xl font-semibold text-white mb-4">Advanced Encryption Standard In Cryptography</h2>
+            <h2 className="text-2xl font-semibold text-white mb-4">Advanced AES Encryption & Decryption Tool</h2>
             <p className="text-lg mb-4 text-gray-300">
                 Explore advanced AES encryption with customizable modes, key sizes, key and output formats.
             </p>

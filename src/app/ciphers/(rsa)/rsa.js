@@ -170,7 +170,7 @@ const RSAPage = () => {
 
     return (
         <div className="mx-auto lg:ml-[150px] sm:w-full xl:w-[80%] lg:w-[80%] p-4">
-            <h2 className="text-2xl font-semibold text-white mb-4">RSA Encryption and Decryption Explained</h2>
+            <h2 className="text-2xl font-semibold text-white mb-4">RSA Algorithm Encryption & Decryption Tool</h2>
             <p className="text-lg mb-4 text-gray-300">
                 Explore RSA encryption with customizable key sizes and public/private key management.
             </p>

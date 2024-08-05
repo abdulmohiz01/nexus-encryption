@@ -2,7 +2,7 @@ import BreadCrumb from "../../../components/breadcrumb";
 import DesPage from "../(des)/des";
 
 export const metadata = {
-    title: "DES, DES2 & DES3 Encryption & Decryption Tool",
+    title: "DES Cipher Algorithm - DES2, DES3 Encryption and Decryption",
     description: "Explore the Data Encryption Standard (DES) tool for secure encryption and decryption. Supports single, double, and triple DES for enhanced security.",
     author: "Nexus Encryption",
     robots: "index, follow",

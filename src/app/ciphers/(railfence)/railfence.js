@@ -95,7 +95,7 @@ const RailFence = () => {
     };
     return (
         <div className="lg:ml-[150px] xl:w-[60%] lg:w-[80%] flex flex-col gap-5 items-start h-auto p-5">
-            <h1 className='text-3xl font-semibold text-white'>Fence Rail Cipher - Rail Fence Cipher Decoder</h1>
+            <h1 className='text-3xl font-semibold text-white'>Rail Fence Cipher Decoder</h1>
             <TextField
                 autoComplete='off'
                 className='sm:w-full'

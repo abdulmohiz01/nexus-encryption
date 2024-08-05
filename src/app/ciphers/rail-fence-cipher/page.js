@@ -5,13 +5,13 @@ import RailFence from "./../(railfence)/railfence"
 
 
 export const metadata = {
-    title: "Rail Fence Cipher Decoder",
-    description: "Explore the Rail Fence Cipher decoder, a transposition cipher where plaintext is written in a zigzag pattern across multiple rails, then read off row by row to create the ciphertext.",
+    title: "Fence Rail Cipher",
+    description: "Explore the Rail Fence Cipher, a transposition cipher where plaintext zigzags across multiple rails and is read off row by row.",
     author: "Nexus Encryption",
     robots: "index, follow",
     openGraph: {
         title: "Rail Fence Cipher Decoder",
-        description: "Explore the Rail Fence Cipher decoder, a transposition cipher where plaintext is written in a zigzag pattern across multiple rails, then read off row by row to create the ciphertext.",
+        description: "Explore the Rail Fence Cipher, a transposition cipher where plaintext zigzags across multiple rails and is read off row by row.",
         type: "website",
         url: "https://nexusencryption.com/",
         image: "https://nexusencryption.com/_next/image?url=%2Fnexus-1.png&w=640&q=75",
@@ -21,6 +21,7 @@ export const metadata = {
     language: "en-US",
     category: 'ciphers',
 };
+
 
 
 const RailFenceCipher = () => {
