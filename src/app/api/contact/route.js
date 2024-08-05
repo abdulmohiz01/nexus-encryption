@@ -11,19 +11,15 @@ export async function POST(request) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
+      port: 587,
+      secure: false,
 
-      tls: {
-        // do not fail on invalid certs
-        rejectUnauthorized: false,
-      },
       auth: {
         user: process.env.emailFrom,
         pass: process.env.pass,
       },
     });
-    
+
     transporter.verify(function (error, success) {
       if (error) {
         console.log(error);
