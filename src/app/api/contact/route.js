@@ -10,11 +10,9 @@ export async function POST(request) {
     const data = await request.json();
     const { name, email, subject, message } = data;
 
-    
-
     const emailResponse = await resend.emails.send({
       from: `Nexus Encryption <no-reply@nexusencryption.com>`,  // Replace with your verified sender address
-      to: `Skylark <${process.env.emailTo}>`,
+      to: `skylark7768@gmail.com`,
       subject: `${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`,
     });
