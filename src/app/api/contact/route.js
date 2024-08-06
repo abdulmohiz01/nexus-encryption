@@ -8,18 +8,20 @@ export async function POST(request) {
     const data = await request.json();
     const { name, email, subject, message } = data;
 
-    console.log('Data received:', data);
-    console.log('Sending email from:', process.env.emailFrom, 'to:', process.env.emailTo);
+    const toEmail = process.env.emailTo;
+
+    if (!toEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) && !toEmail.match(/^[^<]+<[^@]+@[^>]+>$/)) {
+      return NextResponse.json({ error: 'Invalid to email format' }, { status: 400 });
+    }
 
     const emailResponse = await resend.emails.send({
-      from: `Nexus Encryption <no-reply@nexusencryption.com>`, 
-      to: process.env.emailTo,
+      from: `Nexus Encryption <no-reply@nexusencryption.com>`,  // Replace with your verified sender address
+      to: toEmail,
       subject: `${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`,
     });
 
     if (emailResponse.error) {
-      console.error('Error sending email:', emailResponse.error);
       return NextResponse.json({ error: emailResponse.error }, { status: 500 });
     }
 
