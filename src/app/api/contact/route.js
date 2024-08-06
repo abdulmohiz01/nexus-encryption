@@ -4,19 +4,17 @@ import { NextResponse } from 'next/server';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
+  
+  
   try {
     const data = await request.json();
     const { name, email, subject, message } = data;
 
-    const toEmail = process.env.emailTo;
-
-    if (!toEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) && !toEmail.match(/^[^<]+<[^@]+@[^>]+>$/)) {
-      return NextResponse.json({ error: 'Invalid to email format' }, { status: 400 });
-    }
+    
 
     const emailResponse = await resend.emails.send({
       from: `Nexus Encryption <no-reply@nexusencryption.com>`,  // Replace with your verified sender address
-      to: toEmail,
+      to: `Skylark <${process.env.emailTo}>`,
       subject: `${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`,
     });
