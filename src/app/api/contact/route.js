@@ -7,17 +7,12 @@ export async function POST(request) {
   try {
     const data = await request.json();
     const { name, email, subject, message } = data;
-
-    console.log('Data received:', data);
-    console.log('Sending email from:', process.env.emailFrom, 'to:', process.env.emailTo);
-
     const emailResponse = await resend.emails.send({
       from: `Nexus Encryption<no-reply@nexusencryption.com>`, 
       to: `${process.env.emailTo}`,
       subject: `${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`,
     });
-
     if (emailResponse.error) {
       console.error('Error sending email:', emailResponse.error);
       return NextResponse.json({ error: emailResponse.error }, { status: 500 });
