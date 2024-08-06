@@ -1,44 +1,31 @@
-
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
     const data = await request.json();
-    // console.log(data);
-    console.log(process.env.emailTo, process.env.emailFrom);
     const { name, email, subject, message } = data;
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: true,
-      auth: {
-        user: process.env.emailFrom,
-        pass: process.env.pass,
-      },
-    });
 
-    transporter.verify(function (error, success) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Server is ready to take our messages");
-      }
-    });
-    const mailOptions = {
-      from: process.env.emailFrom,
+    console.log('Data received:', data);
+    console.log('Sending email from:', process.env.emailFrom, 'to:', process.env.emailTo);
+
+    const emailResponse = await resend.emails.send({
+      from: `Nexus Encryption <no-reply@nexusencryption.com>`,  // Replace with your verified sender address
       to: process.env.emailTo,
       subject: `${subject}`,
-      text: `Name: ${name} \nEmail: ${email}\n\nMessage: ${message}`,
-    };
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`,
+    });
 
-    await transporter.sendMail(mailOptions);
+    if (emailResponse.error) {
+      console.error('Error sending email:', emailResponse.error);
+      return NextResponse.json({ error: emailResponse.error }, { status: 500 });
+    }
 
-
-    return NextResponse.json({ message: 'Data received successfully' }, { status: 200 });
+    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
   } catch (error) {
-    console.error(error);
+    console.error('Error processing request:', error);
     return NextResponse.json({ message: 'Error processing request' }, { status: 500 });
   }
 }
