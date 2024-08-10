@@ -215,9 +215,9 @@ const CaesarCipher = () => {
         {isEncryptMode ? 'Switch to Decrypt Mode' : 'Switch to Encrypt Mode'}
       </Button>
 
-      <div className={`xl:w-[100%] sm:w-full rotations-container ${isRotationsVisible ? 'open' : 'closed'}`}>
+      <div className={`lg:w-[100%] sm:w-full rotations-container ${isRotationsVisible ? 'open' : 'closed'}`}>
         <div className="w-full">
-          <div className="xl:w-[60%] sm:w-full">
+          <div className="sm:w-full">
             <hr className="w-full border-t border-gray-300 my-5" />
             <h1 className="text-2xl font-semibold mb-3 sm:px-2">Transformation</h1>
             <div className='flex items-center justify-around md:p-2 sm:py-1 sm:px-2 gap-2'>

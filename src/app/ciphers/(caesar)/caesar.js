@@ -7,7 +7,6 @@ import ArbitraryCaesarCipher from "../(arbitrary)/arbitrary";
 
 
 
-
 const Caesar = () => {
     const [inputText, setInputText] = useState("");
     const [rotations, setRotations] = useState([]);
