@@ -1,11 +1,10 @@
+'use client'
 import Link from "next/link";
 import Button from '@mui/material/Button';
+import EncryptButton from "../components/button";
 
 
 export default async function Home() {
-
-
-
   return (
     <div className="flex flex-col justify-center items-center h-screen p-6  text-gray-100">
       <div className="text-center mb-8">
@@ -36,6 +35,7 @@ export default async function Home() {
             Explore Ciphers
           </Button>
         </Link>
+        {/* <EncryptButton /> */}
       </div>
     </div>
   );
