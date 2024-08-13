@@ -1,4 +1,4 @@
-import ContactPage from "./../../components/contact"
+import ContactPage from "../(contact)/contact"
 export const metadata = {
   title: "Contact Us",
   description: "Get in touch with the Nexus Encryption team. Whether you have questions, need support, or want to provide feedback, we're here to help. Reach out to us via our contact form or social media channels.",

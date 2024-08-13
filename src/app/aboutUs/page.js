@@ -1,4 +1,4 @@
-import AboutPage from "../../components/aboutus"
+import AboutPage from "../(aboutus)/aboutus"
 import BreadCrumb from "../../components/breadcrumb";
 
 

@@ -70,10 +70,7 @@ const Button = ({ onClick, buttonText, type }) => {
         >
             <div className="relative z-10 flex items-center gap-2 ">
                 {type == 1 ? <FiLock /> : null}
-                {type == 2 ? <FiUnlock /> : null}
-                
-
-
+                {type == 2 ? <FiUnlock /> : null} 
                 <span>{text}</span>
             </div>
             <motion.span

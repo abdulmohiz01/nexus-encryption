@@ -28,6 +28,21 @@ module.exports = {
         opensans: [`var(--open-sans)`, 'sans-serif'],
         // sora: [`var(--font-sora)`, 'sans-serif'],
       },
+      keyframes: {
+        'rotate-clockwise': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'rotate-counter-clockwise': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        },
+      },
+      animation: {
+        'rotate-clockwise': 'rotate-clockwise 3s linear infinite',
+        'rotate-counter-clockwise': 'rotate-counter-clockwise 3s linear infinite',
+        'rotate-slow': 'rotate-counter-clockwise 6s linear infinite',
+      },
     },
   },
   plugins: [],

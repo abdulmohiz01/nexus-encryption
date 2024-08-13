@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { TextField, Container, Typography } from '@mui/material';
-import Button from './button';
+import Button from '../../components/button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -63,7 +63,6 @@ const ContactPage = () => {
 
   return (
     <>
-
       <ThemeProvider theme={theme}>
         <Container maxWidth="md" className=" text-white p-6 rounded-lg shadow-md mt-10">
           <Typography variant="h3" component="h1" className="text-center mb-6 text-white">
