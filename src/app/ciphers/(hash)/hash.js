@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from 'react';
-import { TextField, Button, Select, MenuItem, InputLabel, FormControl } from '@mui/material';
+import { TextField, Select, MenuItem, InputLabel, FormControl } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CryptoJS from "crypto-js";
+import Button from "../../../components/button";
 
 // Custom styled components for MUI
 const StyledTextField = styled(TextField)(({ theme }) => ({
@@ -92,12 +93,17 @@ const HashPage = () => {
     const [hashFunction, setHashFunction] = useState('SHA-256');
     const [isContentsVisible, setIsContentsVisible] = useState(false);
     const [isHashing, setIsHashing] = useState(false);
+    const [helper, setHelperText] = useState("");
 
     const toggleContents = () => {
         setIsContentsVisible(!isContentsVisible);
     };
 
     const handleHash = () => {
+        if (input == "" || input == " ") {
+            setHelperText("Please Enter a text to hash.");
+            return;
+        }
         setIsHashing(true);
         setTimeout(() => {
             try {
@@ -173,11 +179,34 @@ const HashPage = () => {
                         label="Text to Hash"
                         variant="outlined"
                         fullWidth
+                        helperText={helper}
                         multiline
                         rows={4}
                         value={input}
-                        onChange={(e) => setInput(e.target.value)}
+                        onChange={(e) => setInput(e.target.value , setHelperText(""))}
                         className="mb-4"
+                        sx={{
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'gray',
+                                },
+                                '& input': {
+                                    color: 'white',
+                                },
+                            },
+                            '& .MuiInputLabel-root': {
+                                color: 'white',
+                            },
+                            '& .MuiFormHelperText-root': {
+                                color: 'red',
+                            },
+                        }}
                     />
                     <FormControl className="mb-4 w-full">
                         <StyledInputLabel id="hash-function-label">Hash Function</StyledInputLabel>
@@ -194,14 +223,8 @@ const HashPage = () => {
                             <MenuItem value="RIPEMD-160">RIPEMD-160</MenuItem>
                         </StyledSelect>
                     </FormControl>
-                    <StyledButton
-                        variant="contained"
-                        onClick={handleHash}
-                        className="mb-4"
-                        disabled={isHashing}
-                    >
-                        {isHashing ? 'Hashing...' : 'Generate Hash'}
-                    </StyledButton>
+                    <Button onClick={handleHash} buttonText={isHashing ? 'Hashing...' : 'Generate Hash'} />
+
                 </div>
 
                 <div className="mb-4 xl:w-[50%]">

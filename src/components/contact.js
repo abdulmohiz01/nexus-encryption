@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { TextField, Button, Container, Typography } from '@mui/material';
+import { TextField, Container, Typography } from '@mui/material';
+import Button from './button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -187,27 +188,9 @@ const ContactPage = () => {
                 },
               }}
             />
-            <Button
-              type="submit"
-              variant="contained"
-              color="secondary"
-              fullWidth
-              sx={{
-                backgroundColor: 'gray',
-                color: 'white',
-                fontWeight: 'bold',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.5rem',
-                mt: '1rem',
-                transition: 'all 0.3s ease-in-out',
-                '&:hover': {
-                  backgroundColor: 'lightgray',
-                  color: 'black',
-                },
-              }}
-            >
-              Send Message
-            </Button>
+            <div className='flex justify-center'>
+              <Button buttonText={'Send Message'}/>
+            </div>
           </form>
           {formSubmitted && (
             <Typography

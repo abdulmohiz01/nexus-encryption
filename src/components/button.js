@@ -1,5 +1,6 @@
+'use client'
 import { useRef, useState, useEffect } from "react";
-import { FiLock,FiUnlock } from "react-icons/fi";
+import { FiLock, FiUnlock } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const TARGET_TEXT = "Encrypt";
@@ -71,6 +72,8 @@ const Button = ({ onClick, buttonText, type }) => {
                 {type == 1 ? <FiLock /> : null}
                 {type == 2 ? <FiUnlock /> : null}
                 
+
+
                 <span>{text}</span>
             </div>
             <motion.span

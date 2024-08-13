@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from 'react';
-import { TextField, Button, Select, MenuItem, InputLabel, FormControl } from '@mui/material';
+import { TextField, Select, MenuItem, InputLabel, FormControl } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CryptoJS from "crypto-js";
+import Button from '../../../components/button';
 
 // Custom styled components for MUI
 const StyledTextField = styled(TextField)(({ theme }) => ({
@@ -376,13 +377,8 @@ const DesPage = () => {
               </StyledSelect>
             </FormControl>
           </div>
-          <StyledButton
-            variant="contained"
-            onClick={handleEncrypt}
-            className="mr-4 mb-3"
-          >
-            Encrypt
-          </StyledButton>
+          <Button onClick={handleEncrypt} type={1} />
+
           <StyledTextField
             label="Ciphertext"
             variant="outlined"
@@ -441,13 +437,7 @@ const DesPage = () => {
               </FormControl>
             </div>
           </div>
-          <StyledButton
-            variant="contained"
-            onClick={handleDecrypt}
-            className="mr-4 mb-3"
-          >
-            Decrypt
-          </StyledButton>
+          <Button onClick={handleDecrypt} type={2} />
           <StyledTextField
             label="Decrypted Text"
             variant="outlined"
