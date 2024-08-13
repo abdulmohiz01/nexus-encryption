@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { TextField, Button } from '@mui/material';
+import { TextField} from '@mui/material';
+import Button from '../../../components/button';
 
 const Vigenere = () => {
   const [text, setText] = useState('');
@@ -140,46 +141,8 @@ const Vigenere = () => {
           style: { color: 'white' },
         }}
       />
-      <Button
-        variant="contained"
-        onClick={handleEncrypt}
-        sx={{
-          backgroundColor: 'gray',
-          color: 'white',
-          fontWeight: 'bold',
-          padding: '0.5rem 1rem',
-          borderRadius: '0.5rem',
-          mt: '1rem',
-          width: '200px',
-          transition: 'all 0.3s ease-in-out',
-          '&:hover': {
-            backgroundColor: 'lightgray',
-            color: 'black'
-          },
-        }}
-      >
-        {isEncryptMode ? 'Encrypt' : 'Decrypt'}
-      </Button>
-      <Button
-        variant="contained"
-        onClick={handleModeToggle}
-        sx={{
-          backgroundColor: 'gray',
-          color: 'white',
-          fontWeight: 'bold',
-          padding: '0.5rem 1rem',
-          borderRadius: '0.5rem',
-          mt: '1rem',
-          width: 'auto',
-          transition: 'all 0.3s ease-in-out',
-          '&:hover': {
-            backgroundColor: 'lightgray',
-            color: 'black'
-          },
-        }}
-      >
-        {isEncryptMode ? 'Switch to Decrypt Mode' : 'Switch to Encrypt Mode'}
-      </Button>
+      <Button onClick={handleEncrypt} buttonText={isEncryptMode ? 'Encrypt' : 'Decrypt'} type={isEncryptMode ? 1 : 2}/>
+      <Button onClick={handleModeToggle} buttonText={isEncryptMode ? 'Switch to Decrypt Mode' : 'Switch to Encrypt Mode'}/>
       <div className={`sm:w-full lg:w-[80%] rotations-container ${result ? 'open' : 'closed'}`}>
         <div className="w-full">
           <div className="xl:w-[100%] sm:w-full">

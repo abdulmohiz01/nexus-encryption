@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { TextField, Button } from '@mui/material';
+import { TextField } from '@mui/material';
+import Button from '../../../components/button';
 
 const RailFence = () => {
     const [plaintext, setPlaintext] = useState('');
@@ -173,26 +174,8 @@ const RailFence = () => {
                     style: { color: 'white' },
                 }}
             />
-            <Button
-                variant="contained"
-                onClick={handleEncrypt}
-                sx={{
-                    backgroundColor: 'gray',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    padding: '0.5rem 1rem',
-                    borderRadius: '0.5rem',
-                    mt: '1rem',
-                    width: '200px',
-                    transition: 'all 0.3s ease-in-out',
-                    '&:hover': {
-                        backgroundColor: 'lightgray',
-                        color: 'black'
-                    },
-                }}
-            >
-                Encrypt
-            </Button>
+            <Button onClick={handleEncrypt} type={1} />
+
             {showResult1 && (
                 <div className="sm:w-full lg:w-[80%] slide-down">
                     <h1 className="text-2xl font-semibold mb-3 sm:px-2 text-white">Result</h1>
@@ -204,26 +187,8 @@ const RailFence = () => {
 
                 </div>
             )}
-            <Button
-                variant="contained"
-                onClick={handleDecrypt}
-                sx={{
-                    backgroundColor: 'gray',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    padding: '0.5rem 1rem',
-                    borderRadius: '0.5rem',
-                    mt: '1rem',
-                    width: '200px',
-                    transition: 'all 0.3s ease-in-out',
-                    '&:hover': {
-                        backgroundColor: 'lightgray',
-                        color: 'black'
-                    },
-                }}
-            >
-                Decrypt
-            </Button>
+            <Button onClick={handleDecrypt} buttonText={'Decrypt'} type={2} />
+
             {showResult2 && (
                 <div className="sm:w-full lg:w-[80%] slide-down">
                     <h1 className="text-2xl font-semibold mb-3 sm:px-2 text-white">Result</h1>

@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react';
-import { TextField, Button } from '@mui/material';
+import { TextField} from '@mui/material';
+import Button from '../../../components/button';
 
 const CaesarCipher = () => {
   const [text, setText] = useState('');
@@ -172,48 +173,8 @@ const CaesarCipher = () => {
           style: { color: 'white' },
         }}
       />
-      <Button
-        variant="contained"
-        onClick={handleClick}
-        sx={{
-          backgroundColor: 'gray',
-          color: 'white',
-          fontWeight: 'bold',
-          padding: '0.5rem 1rem',
-          borderRadius: '0.5rem',
-          mt: '1rem',
-          width: '200px',
-          transition: 'all 0.3s ease-in-out',
-          '&:hover': {
-            backgroundColor: 'lightgray',
-            color: 'black',
-          },
-        }}
-      >
-        {isEncryptMode ? 'Encrypt' : 'Decrypt'}
-      </Button>
-
-      <Button
-        variant="contained"
-        onClick={handleModeToggle}
-        sx={{
-          backgroundColor: 'gray',
-          color: 'white',
-          fontWeight: 'bold',
-          borderRadius: '0.5rem',
-          mt: '1rem',
-          padding: '0.5rem 1rem',
-          width: 'auto',
-          transition: 'all 0.3s ease-in-out',
-          '&:hover': {
-            backgroundColor: 'lightgray',
-            color: 'black',
-          },
-
-        }}
-      >
-        {isEncryptMode ? 'Switch to Decrypt Mode' : 'Switch to Encrypt Mode'}
-      </Button>
+      <Button onClick={handleClick} buttonText={isEncryptMode ? 'Encrypt' : 'Decrypt'} type={isEncryptMode ? 1: 2} />
+      <Button onClick={handleModeToggle} buttonText={isEncryptMode ? 'Switch to Decrypt Mode' : 'Switch to Encrypt Mode'} />
 
       <div className={`lg:w-[100%] sm:w-full rotations-container ${isRotationsVisible ? 'open' : 'closed'}`}>
         <div className="w-full">

@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
-import { TextField, Button, Select, MenuItem, InputLabel, FormControl } from '@mui/material';
+import { TextField, Select, MenuItem, InputLabel, FormControl } from '@mui/material';
+import Button from '../../../components/button';
 import { styled } from '@mui/material/styles';
 import JSEncrypt from "jsencrypt";
 
@@ -212,15 +213,7 @@ const RSAPage = () => {
                             <MenuItem value={4096}>4096 bits</MenuItem>
                         </StyledSelect>
                     </FormControl>
-                    <StyledButton
-                        variant="contained"
-                        onClick={handleGenerateKeyPair}
-                        className="mb-4"
-                        disabled={isGeneratingKeys}
-                    >
-                        {isGeneratingKeys ? 'Generating...' : 'Generate Key Pair'}
-                    </StyledButton>
-
+                    <Button onClick={handleGenerateKeyPair} buttonText={isGeneratingKeys ? 'Generating...' : 'Generate Key Pair'} />
                     <StyledTextField
                         label="Public Key"
                         variant="outlined"
@@ -255,13 +248,8 @@ const RSAPage = () => {
                         onChange={(e) => setPlaintext(e.target.value)}
                         className="mb-4"
                     />
-                    <StyledButton
-                        variant="contained"
-                        onClick={handleEncrypt}
-                        className="mr-4 mb-3"
-                    >
-                        Encrypt
-                    </StyledButton>
+                    <Button onClick={handleEncrypt} type={1} />
+
                     <StyledTextField
                         label="Ciphertext"
                         variant="outlined"
@@ -272,13 +260,7 @@ const RSAPage = () => {
                         onChange={(e) => setCiphertext(e.target.value)}
                         className="mb-4"
                     />
-                    <StyledButton
-                        variant="contained"
-                        onClick={handleDecrypt}
-                        className="mr-4 mb-3"
-                    >
-                        Decrypt
-                    </StyledButton>
+                    <Button onClick={handleDecrypt} buttonText={'Decrypt'} type={2} />
                     <StyledTextField
                         label="Decrypted Text"
                         variant="outlined"
@@ -375,17 +357,17 @@ const RSAPage = () => {
                     </p>
                     <pre className="p-4 rounded-lg text-gray-300">
                         {`
-Public key (n, e): (3233, 17)
-Private key (n, d): (3233, 2753)
+                            Public key (n, e): (3233, 17)
+                            Private key (n, d): (3233, 2753)
 
-Plaintext: 123
+                            Plaintext: 123
 
-Encryption:
-C = 123^17 mod 3233 = 855
+                            Encryption:
+                            C = 123^17 mod 3233 = 855
 
-Decryption:
-M = 855^2753 mod 3233 = 123
-            `}
+                            Decryption:
+                            M = 855^2753 mod 3233 = 123
+                        `}
                     </pre>
                 </section>
             </div>

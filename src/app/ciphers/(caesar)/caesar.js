@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { TextField } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
-import Button from "@mui/material/Button"
 import ArbitraryCaesarCipher from "../(arbitrary)/arbitrary";
+import Button from "../../../components/button";
 
 
 
@@ -134,26 +134,7 @@ const Caesar = () => {
                             style: { color: 'white' },
                         }}
                     />
-                    <Button
-                        onClick={handleEncrypt}
-                        variant="contained"
-                        sx={{
-                            backgroundColor: 'gray',
-                            color: 'white',
-                            fontWeight: 'bold',
-                            padding: '0.5rem 1rem',
-                            borderRadius: '0.5rem',
-                            mt: '1rem',
-                            width: '200px',
-                            transition: 'all 0.3s ease-in-out',
-                            '&:hover': {
-                                backgroundColor: 'lightgray',
-                                color: 'black'
-                            },
-                        }}
-                    >
-                        Encrypt
-                    </Button>
+                    <Button onClick={ handleEncrypt} type={1} />
 
                 </div>
                 {/* ---------------------ROTATIONS--------------------- */}
