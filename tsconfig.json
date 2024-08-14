@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/aboutUs/page.js"  ],
+, "src/app/aboutUs/page.js", "src/components/custom/googletagmanager.js"  ],
   "exclude": [
     "node_modules"
   ]
