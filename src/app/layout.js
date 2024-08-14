@@ -23,13 +23,11 @@ export const metadata = {
   },
   canonical: "https://nexusencryption.com/",
 };
-
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* All About Gooogle */}
         <GoogleTagManager containerId={process.env.GTM_ID} />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6597722728082254"
           crossorigin="anonymous"></script>
@@ -41,7 +39,7 @@ export default function RootLayout({ children }) {
             `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', ${process.env.G_T});`
+          gtag('config', ${process.env.G_T});` 
           }
         </Script>
       </head>
