@@ -1,8 +1,5 @@
 'use client'
 import Link from 'next/link';
-import { Container, Typography, Card, CardContent, CardActionArea } from '@mui/material';
-
-
 const classicalCiphers = [
     {
         name: 'Caesar Cipher',
@@ -44,16 +41,15 @@ const modernCiphers = [
 
 ];
 
-
 const CipherPage = () => {
 
     return (
         <div>
-            <Container maxWidth="md" className="text-white p-4 rounded-lg shadow-lg mt-10">
-                <Typography variant="h3" component="h1" className="text-center mb-6 text-gray-200">Classical Ciphers</Typography>
+            <div className="text-white p-4 rounded-lg shadow-lg mt-10 max-w-5xl mx-auto">
+                <h1 className="text-center font-normal text-5xl mb-6 text-gray-200">Classical Ciphers</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {classicalCiphers.map((cipher, index) => (
-                        <div key={index} className="bg-gray-700 text-white font-light rounded-lg shadow-lg overflow-hidden" >
+                        <div key={index} className="bg-gray-700 text-white font-light rounded-lg shadow-lg overflow-hidden">
                             <Link href={cipher.link} className="block hover:bg-gray-600 transition duration-300">
                                 <div className="p-4">
                                     <h5 className="text-xl font-semibold mb-2">
@@ -67,11 +63,10 @@ const CipherPage = () => {
                         </div>
                     ))}
                 </div>
-            </Container>
-            <Container maxWidth="md" className="text-white p-4 mb-8 rounded-lg shadow-lg mt-10">
-                <Typography variant="h3" component="h1" className="text-center mb-6 text-gray-200">
-                    Modern Ciphers
-                </Typography>
+            </div>
+
+            <div className="text-white p-4 mb-8 font-normal rounded-lg shadow-lg mt-10 max-w-5xl mx-auto">
+                <h1 className="text-center text-5xl mb-6 text-gray-200">Modern Ciphers</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {modernCiphers.map((cipher, index) => (
                         <div key={index} className="bg-gray-700 text-white font-light rounded-lg shadow-lg overflow-hidden">
@@ -86,11 +81,11 @@ const CipherPage = () => {
                                 </div>
                             </Link>
                         </div>
-
                     ))}
                 </div>
-            </Container>
+            </div>
         </div>
+
     )
 }
 
