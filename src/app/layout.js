@@ -5,6 +5,7 @@ import Footer from "./../components/footer"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import GoogleTagManager from "./../components/custom/googletagmanager"
+import Script from "next/script";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,10 +35,16 @@ export default function RootLayout({ children }) {
           crossorigin="anonymous"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6597722728082254"
           crossorigin="anonymous"></script>
-
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.G_T}`}></script>
+        <Script id='google-analytics'>
+          {
+            `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ${process.env.G_T});`
+          }
+        </Script>
       </head>
-
-
       <body className={inter.className}>
         <noscript>
           <iframe src={`https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} ></iframe>
