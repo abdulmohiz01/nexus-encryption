@@ -46,30 +46,25 @@ const modernCiphers = [
 
 
 const CipherPage = () => {
-    
+
     return (
         <div>
             <Container maxWidth="md" className="text-white p-4 rounded-lg shadow-lg mt-10">
                 <Typography variant="h3" component="h1" className="text-center mb-6 text-gray-200">Classical Ciphers</Typography>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {classicalCiphers.map((cipher, index) => (
-                        <Card
-                            key={index}
-                            className="bg-gray-700 text-white rounded-lg shadow-lg"
-                        >
-                            <CardActionArea>
-                                <Link href={cipher.link} passHref>
-                                    <CardContent>
-                                        <Typography variant="h5" component="div" className="mb-2">
-                                            {cipher.name}
-                                        </Typography>
-                                        <Typography variant="body2" className='text-gray-200'>
-                                            {cipher.description}
-                                        </Typography>
-                                    </CardContent>
-                                </Link>
-                            </CardActionArea>
-                        </Card>
+                        <div key={index} className="bg-gray-700 text-white font-light rounded-lg shadow-lg overflow-hidden" >
+                            <Link href={cipher.link} className="block hover:bg-gray-600 transition duration-300">
+                                <div className="p-4">
+                                    <h5 className="text-xl font-semibold mb-2">
+                                        {cipher.name}
+                                    </h5>
+                                    <p className="text-gray-200 line-clamp-3">
+                                        {cipher.description}
+                                    </p>
+                                </div>
+                            </Link>
+                        </div>
                     ))}
                 </div>
             </Container>
@@ -79,23 +74,19 @@ const CipherPage = () => {
                 </Typography>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {modernCiphers.map((cipher, index) => (
-                        <Card
-                            key={index}
-                            className="bg-gray-700 text-white rounded-lg shadow-lg"
-                        >
-                            <CardActionArea>
-                                <Link href={cipher.link} passHref>
-                                    <CardContent>
-                                        <Typography variant="h5" component="div" className="mb-2">
-                                            {cipher.name}
-                                        </Typography>
-                                        <Typography variant="body2" className='text-gray-200'>
-                                            {cipher.description}
-                                        </Typography>
-                                    </CardContent>
-                                </Link>
-                            </CardActionArea>
-                        </Card>
+                        <div key={index} className="bg-gray-700 text-white font-light rounded-lg shadow-lg overflow-hidden">
+                            <Link href={cipher.link} className="block hover:bg-gray-600 transition duration-300">
+                                <div className="p-4">
+                                    <h5 className="text-xl font-semibold mb-2">
+                                        {cipher.name}
+                                    </h5>
+                                    <p className="text-gray-200 line-clamp-3">
+                                        {cipher.description}
+                                    </p>
+                                </div>
+                            </Link>
+                        </div>
+
                     ))}
                 </div>
             </Container>
