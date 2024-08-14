@@ -39,8 +39,9 @@ export default function RootLayout({ children }) {
 
 
       <body className={inter.className}>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRT3H7ZV"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript>
+          <iframe src={`https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} ></iframe>
+        </noscript>
         <Header />
         {children}
         <Footer />
