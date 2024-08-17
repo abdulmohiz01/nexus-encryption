@@ -15,6 +15,9 @@ body {
   background-repeat: no-repeat;
   color: white;
 }
+.p {
+  font-weight: 400;
+}
 
 .card {
   --tw-bg-opacity: 1;
