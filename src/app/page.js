@@ -86,11 +86,11 @@ export default async function Home() {
         <h2 className='lg:text-[2.7vw] md:text-[3.7vw] sm:text-[25px]' >Cipher Tools on Out Website</h2>
         <p className='md:text-[20px] sm:text-[17px]' >Explore our suite of online cipher tools for efficient encryption and decryption:</p>
         <ol className="md:text-[20px] sm:text-[17px]">
-          <li><strong>1. Caesar Cipher Tool:</strong> Encrypt text by shifting letters in the alphabet. <Link className="underline" href={'/ciphers/caesar-cipher'}>[Try it here.]</Link></li>
-          <li><strong>2. Vigenère Cipher Tool:</strong> Use a keyword to secure text with a patterned encryption. <Link className="underline" href={'/ciphers/vigenere-cipher'}>[Access it here.]</Link></li>
-          <li><strong>3. Rail Fence Cipher Tool:</strong> Encode text by arranging it in a zigzag format. <Link className="underline" href={'/ciphers/rail-fence-cipher'}>[Explore it here.]</Link></li>
-          <li><strong>4. RSA Encryption Tool:</strong> Secure data using public-key cryptography. <Link className="underline" href={'/ciphers/rsa-algorithm'}>[Test it here.]</Link></li>
-          <li><strong>5. AES Encryption Tool:</strong> Protect your data with advanced symmetric encryption. <Link className="underline" href={'/ciphers/advanced-encryption-standard'}>[Try it here.]</Link></li>
+          <li><strong>1. Caesar Cipher Tool:</strong> Encrypt text by shifting letters in the alphabet. <Link className="underline" href={'/ciphers/caesar-cipher'}>Try it here.</Link></li>
+          <li><strong>2. Vigenère Cipher Tool:</strong> Use a keyword to secure text with a patterned encryption. <Link className="underline" href={'/ciphers/vigenere-cipher'}>Access it here.</Link></li>
+          <li><strong>3. Rail Fence Cipher Tool:</strong> Encode text by arranging it in a zigzag format. <Link className="underline" href={'/ciphers/rail-fence-cipher'}>Explore it here.</Link></li>
+          <li><strong>4. RSA Encryption Tool:</strong> Secure data using public-key cryptography. <Link className="underline" href={'/ciphers/rsa-algorithm'}>Test it here.</Link></li>
+          <li><strong>5. AES Encryption Tool:</strong> Protect your data with advanced symmetric encryption. <Link className="underline" href={'/ciphers/advanced-encryption-standard'}>Try it here.</Link></li>
         </ol>
       </div>
       <div className='text-left md:pt-[50px] sm:pt-[40px] leading-relaxed '>
