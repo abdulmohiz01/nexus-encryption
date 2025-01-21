@@ -56,15 +56,15 @@ export default async function Home() {
       </div>
       <div className='text-left md:pt-[50px] sm:pt-[40px] leading-relaxed '>
         <h2 className="lg:text-[2.7vw] md:text-[3.7vw] sm:text-[25px]  ">Types of Ciphers</h2>
-        <h3 className='lg:text-[2.7vw] md:text-[2vw] sm:text-[20px] ' >Classical Ciphers</h3>
-        <ol className="md:text-[20px] sm:text-[17px]">
+        <h3 className='lg:text-[2.2vw] md:text-[2vw] sm:text-[20px] ' >Classical Ciphers</h3>
+        <ol className="md:text-[20px] pl-[20px] sm:text-[17px]">
           <li><strong>1. Caesar Cipher:</strong> Replaces each letter in the plaintext by shifting it a fixed number of positions in the alphabet.</li>
           <li><strong>2. Vigenere Cipher:</strong> Applies a keyword to encrypt text using a repetitive pattern, adding complexity.</li>
           <li><strong>3. Rail Fence Cipher:</strong> Encodes text by arranging it in a zigzag pattern across multiple rows, then reading it sequentially.</li>
         </ol>
       </div>
       <div className='text-left md:pt-[50px] sm:pt-[40px] leading-relaxed '>
-        <h3 className='lg:text-[2.7vw] md:text-[2vw] sm:text-[20px] ' >Modern Ciphers</h3>
+        <h3 className='lg:text-[2.2vw] md:text-[2vw] sm:text-[20px] ' >Modern Ciphers</h3>
         <ol className="md:text-[20px] pl-[20px]">
           <li><strong>1. RSA Algorithm:</strong> Replaces each letter in the plaintext by shifting it a fixed number of positions in the alphabet.</li>
           <li><strong>2. AES (Advanced Encryption Standard):</strong> Applies a keyword to encrypt text using a repetitive pattern, adding complexity.</li>
@@ -75,7 +75,7 @@ export default async function Home() {
       <div className='text-left md:pt-[50px] sm:pt-[40px] leading-relaxed '>
         <h2 className='lg:text-[2.7vw] md:text-[3.7vw] sm:text-[25px]' >How Are Ciphers Used?</h2>
         <p className='md:text-[20px] sm:text-[17px]' ><strong>Ciphers play an essential role in securing communication and protecting data.</strong> They are used for:</p>
-        <ul className="md:text-[20px] sm:text-[17px]">
+        <ul className="md:text-[20px] pl-[20px] sm:text-[17px]">
           <li>1. Encrypting sensitive information during online exchanges.</li>
           <li>2. Authenticating users through cryptographic keys.</li>
           <li>3. Protecting stored data from unauthorized access.</li>
@@ -85,7 +85,7 @@ export default async function Home() {
       <div className='text-left md:pt-[50px] sm:pt-[40px] leading-relaxed '>
         <h2 className='lg:text-[2.7vw] md:text-[3.7vw] sm:text-[25px]' >Cipher Tools on Out Website</h2>
         <p className='md:text-[20px] sm:text-[17px]' >Explore our suite of online cipher tools for efficient encryption and decryption:</p>
-        <ol className="md:text-[20px] sm:text-[17px]">
+        <ol className="md:text-[20px] pl-[20px] sm:text-[17px]">
           <li><strong>1. Caesar Cipher Tool:</strong> Encrypt text by shifting letters in the alphabet. <Link className="underline" href={'/ciphers/caesar-cipher'}>Try it here.</Link></li>
           <li><strong>2. Vigenère Cipher Tool:</strong> Use a keyword to secure text with a patterned encryption. <Link className="underline" href={'/ciphers/vigenere-cipher'}>Access it here.</Link></li>
           <li><strong>3. Rail Fence Cipher Tool:</strong> Encode text by arranging it in a zigzag format. <Link className="underline" href={'/ciphers/rail-fence-cipher'}>Explore it here.</Link></li>
@@ -130,7 +130,7 @@ export default async function Home() {
       <div className='text-left md:pt-[50px] sm:pt-[40px] leading-relaxed '>
         <h2 className='lg:text-[2.7vw] md:text-[3.7vw] sm:text-[25px]' >Why Use Online Cipher Tools</h2>
         <p className='md:text-[20px] sm:text-[17px]'><strong>Online cipher tools simplify encryption and decryption tasks, making them accessible to everyone.</strong> Benefits include:</p>
-        <ol className="md:text-[20px] sm:text-[17px]">
+        <ol className="md:text-[20px] pl-[20px] sm:text-[17px]">
           <li>1. Quick text processing for educational or practical purposes.</li>
           <li>2. Understanding the workings of classical and modern cryptographic methods.</li>
           <li>3. Experimenting with encryption techniques to gain cybersecurity insights.</li>
